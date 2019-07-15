@@ -3,25 +3,23 @@ package ArrayList;
 import java.util.ArrayList;
 
 public class GetSumValue {
-    public Integer getSumValue (ArrayList<Integer> arr) {
-        int value = 0;
-
-        for(int i=1; i < arr.size(); i++){
-            if(value < arr.get(i)) {
-                value = value + arr.get(i);
-            }
+    public static int getSumValue (ArrayList<Integer> arr) {
+        int sum = 0;
+        for (int i: arr) {
+            sum += i;
         }
-        return value;
+        return sum;
     }
 
     public static void main(String[] args) {
-        int result;
+        double result;
         ArrayList<Integer> test = new ArrayList<>();
-        test.add(8);
-        test.add(9);
-        test.add(10);
-        Object potato = new GetSumValue();
-        result = ((GetSumValue) potato).getSumValue(test);
-        System.out.println(result);
+        test.add(1);
+        test.add(2);
+        test.add(3);
+        test.add(4);
+        test.add(5);
+
+        System.out.println(getSumValue(test));
     }
 }

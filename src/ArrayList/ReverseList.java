@@ -12,7 +12,6 @@ public class ReverseList {
             System.out.println("Array size = " + arr.size());
             System.out.println("i = " + i);
             value.add(arr.get(arr.size() - 1) - i);
-
         }
         return value;
     }
